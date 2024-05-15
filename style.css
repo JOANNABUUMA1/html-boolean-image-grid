@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+    border: 10px;
+    padding: 1px;
+  }
+  
+  .container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 0.1fr 1fr 1fr;
+    grid-template-areas:
+      "header"
+      "hero"
+      "main";
+    border: 2px solid black;
+  }
+  
+  header {
+    grid-area: header;
+    background-color: #011434;
+  }
+  
+  .header-logo {
+    height: 60px;
+    width: 60px;
+  }
+  
+  .hero {
+    grid-area: hero;
+    display: block;
+  }
+  
+  .main {
+    margin: 50px;
+    grid-area: main;
+    background-color: white;
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(4, 250px);
+    grid-template-rows: 400px;
+    place-content: center;
+  }
+  
+  @media (max-width: 640px) {
+    .main {
+      grid-template-columns: repeat(2, 250px);
+    }
+  }
+  
+  .boolean-card {
+    background-color: white;
+    border: 2px solid #011434;
+    border-radius: 7px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  
+  .logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: solid 2px black;
+    background-color: red;
+    text-align: center;
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
+  .laptop {
+    width: 100%;
+  }
+  
+  .social {
+    height: 10px;
+    display: grid;
+    grid-template-columns: 20px;
+    grid-auto-rows: 15px;
+    grid-auto-flow: column;
+    justify-content: end;
+    gap: 10px;
+    padding-right: 25px;
+  }
+  
+  .social img {
+    height: 40px;
+    width: 20px;
+  }
+  
+  .text {
+    padding-top: 30px;
+    padding-bottom: 50px;
+  }
+  
+  .right-menu {
+    grid-area: right-menu;
+    background-color: white;
+  }
+  
+  .container-detail {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.1fr 0.1fr 0.8fr;
+    grid-template-areas:
+      "header-detail"
+      "nav-detail"
+      "main-detail";
+  }
+  
+  .header-detail {
+    grid-area: header-detail;
+    background-color: #011434;
+  }
+  
+  .nav-detail {
+    grid-area: nav-detail;
+  }
+  
+  .main-detail {
+    grid-area: main-detail;
+    background-color: white;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    place-content: inherit;
+  }
+  
+  .boolean-card-detail {
+    background-color: white;
+    border: 2px solid #011434;
+    border-radius: 7px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  
